@@ -1,36 +1,28 @@
 package leetcode;
 import java.util.Scanner;
-class Checkpallendrome{
+class CheckReverse{
 	int n;
-	int rev=0;
 	public void inputs() {
 		Scanner sc=new Scanner(System.in);
 		System.out.println("Enter a number");
 		n=sc.nextInt();
 	}
 	public void reverse(int num) {
+		int rev=0;
 		while(num!=0) {
 			int ld=num%10;
 			rev=(rev*10)+ld;
 			num/=10;
 		}
-	}
-	public void check() {
-		if(n==rev) {
-			System.out.println(n+" is a Pallendrome");
-		}else {
-			System.out.println(n+" is not a Pallendrome");
-		}
-
+		System.out.println("The reverse of "+n+" is "+rev);
 	}
 }
 
-public class Pallendrome {
+public class Reverse {
 	public static void main(String[] args) {
-		Checkpallendrome p= new Checkpallendrome();
-		p.inputs();
-		p.reverse(p.n);
-		p.check();
-	}
+		CheckReverse r= new CheckReverse();
+		r.inputs();
+		r.reverse(r.n);
 
+   }
 }
